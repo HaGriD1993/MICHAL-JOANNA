@@ -16,7 +16,7 @@ for badani in zawartosc:
         peopleb = int(data[0])
         if peopleb >=18 and peopleb <=25:
             wszysycy +=1
-#print( "Wszysycy Ludzie" + str(wszysycy))
+print( "Wszysycy Ludzie" + str(wszysycy))
 
 
 
@@ -27,7 +27,7 @@ for AllPeople in zawartosc:
         if people >= 18 and people <= 25:
             if data[14].strip() == '<=50K':
                 iloscLudzi += 1
-#print("Ludzie Zarabiający " + str(iloscLudzi))
+print("Ludzie Zarabiający " + str(iloscLudzi))
 
 
 for kazdaKobieta in zawartosc:
@@ -37,7 +37,7 @@ for kazdaKobieta in zawartosc:
         if kobiety >= 18 and kobiety <= 25:
             if data[14].strip() == '<=50K' and data[9].strip() == 'Female':
                 iloscKobiet += 1
-#print("Kobiety Zarabiajace " + str(iloscKobiet))
+print("Kobiety Zarabiajace " + str(iloscKobiet))
 
 for kazdyMezczyzna in zawartosc:
     data = kazdyMezczyzna.split(",")
@@ -46,7 +46,7 @@ for kazdyMezczyzna in zawartosc:
         if mezczyzni >= 18 and mezczyzni <= 25:
             if data[14].strip() == '<=50K' and data[9].strip() == 'Male':
                 iloscMezczyzn += 1
-#print("Mezczyzni Zarabiajacy " + str(iloscMezczyzn))
+print("Mezczyzni Zarabiajacy " + str(iloscMezczyzn))
 
 
 
@@ -58,7 +58,7 @@ for AllPeople in zawartosc:
         if people >= 18 and people <= 25:
             if data[14].strip() == '>50K':
                 iloscLudziMniej += 1
-#print("Ludzie Zarabiający mniej " + str(iloscLudziMniej))
+print("Ludzie Zarabiający mniej " + str(iloscLudziMniej))
 
 for kazdaKobieta in zawartosc:
     data = kazdaKobieta.split(",")
@@ -67,7 +67,7 @@ for kazdaKobieta in zawartosc:
         if kobiety >= 18 and kobiety <= 25:
             if data[14].strip() == '>50K' and data[9].strip() == 'Female':
                 iloscKobietM += 1
-#print("Kobiety Zarabiajace mniej " + str(iloscKobietM))
+print("Kobiety Zarabiajace mniej " + str(iloscKobietM))
 
 for kazdyMezczyzna in zawartosc:
     data = kazdyMezczyzna.split(",")
@@ -76,4 +76,4 @@ for kazdyMezczyzna in zawartosc:
         if mezczyzni >= 18 and mezczyzni <= 25:
             if data[14].strip() == '>50K' and data[9].strip() == 'Male':
                 iloscMezczyznMniej += 1
-#print("Mezczyzni Zarabiajacy mniej " + str(iloscMezczyznMniej))
+print("Mezczyzni Zarabiajacy mniej " + str(iloscMezczyznMniej))
