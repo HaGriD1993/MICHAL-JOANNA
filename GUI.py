@@ -4,6 +4,7 @@ from pygame import mixer
 import projekt
 from tkinter import font
 
+# window define section
 window_main = Tk()
 window_main.title("Projekt Joanna i Michał (i Bartek :) )")
 window_main.minsize(width=380,height=410)
