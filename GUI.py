@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import filedialog
 from pygame import mixer
-from projekt import *
+import projekt
 from tkinter import font
 
 window_main = Tk()
@@ -10,11 +10,13 @@ window_main.minsize(width=380,height=410)
 window_main.maxsize(width=380,height=410)
 window_main.configure(bg = "#967BB6")
 
+fileToOpen = ""
 
 def open_file():
-    file = filedialog.askopenfile(mode ='r', filetypes =[('Python Files', '*.py')])
-    if file is not None:
-        content = file.read()
+    global fileToOpen
+    fileToOpen= filedialog.askopenfile(mode ='r', filetypes =[('Data files', '*.data')])
+    if fileToOpen is not None:
+        content = fileToOpen.read()
         print(content)
 def delete():
     label_x1.config(text = " ")
@@ -24,12 +26,14 @@ def delete():
     label_x5.config(text = " ")
     label_x6.config(text = " ")
 def insert():
-    label_x1.config(text= iloscLudzi)
-    label_x2.config(text= iloscLudziMniej)
-    label_x3.config(text= iloscMezczyzn)
-    label_x4.config(text= iloscMezczyznMniej)
-    label_x5.config(text= iloscKobiet)
-    label_x6.config(text= iloscKobietM)
+    wartosci = projekt.wczytajPlik(fileToOpen.name)
+
+    label_x1.config(text= wartosci[0])
+    label_x2.config(text= wartosci[1])
+    label_x3.config(text= wartosci[2])
+    label_x4.config(text= wartosci[3])
+    label_x5.config(text= wartosci[4])
+    label_x6.config(text= wartosci[5])
 def music_on():
     mixer.music.load("Goosebumps Theme.mp3")
     mixer.music.play()
