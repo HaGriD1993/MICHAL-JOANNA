@@ -5,7 +5,7 @@ import projekt
 from tkinter import font
 
 window_main = Tk()
-window_main.title("Projekt Joanna i Michał")
+window_main.title("Projekt Joanna i Michał (i Bartek :) )")
 window_main.minsize(width=380,height=410)
 window_main.maxsize(width=380,height=410)
 window_main.configure(bg = "#967BB6")
